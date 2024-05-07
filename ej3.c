@@ -17,7 +17,7 @@ int main() {
         n = 7;
     }
 
-    int matriz[tam_max][tam_max];
+      int matriz[tam_max][tam_max];
 
     srand(time(NULL)); // Se inicializa el comando rand, el cual hace que la matriz se rellene de manera aleatoria
 
