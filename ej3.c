@@ -33,3 +33,27 @@ Se crea el algoritmo que recorre la matriz.
 Se analiza cada posición de la matriz y se expande alrededor de dicha posición
 Se expande hasta que encuentra un cuadrado más grande o llega al límite
 */
+
+    int limite = 0;
+    for (int i = 0; i < n; i++) // valor inicial de la fila
+        for (int j = 0; j < n; j++) // valor inicial de la columna
+            if (matriz[i][j] == 1) {
+                int size = 1;
+                while ((i + size) < n && (j + size) < n) {
+                    int valid = 1;
+                    for (int k = i; k <= i + size; k++)
+                        for (int l = j; l <= j + size; l++)
+                            if (matriz[k][l] != 1) {
+                                valid = 0;
+                                break;
+                            }
+                    if (valid) limite = size + 1;
+                    else break;
+                    size++;
+                }
+            }
+
+    printf("El tamaño del cuadrado más grande encontrado en la matriz es: %d\n", limite);
+
+    return 0;
+}
