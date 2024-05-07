@@ -24,5 +24,6 @@ int main() {
     int fac = factorial(num);
     printf("%d! = %d\n", num, fac); // impresión del número ya calculado
     
+    
     return 0;
 }
