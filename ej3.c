@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-
 // se define la matriz máxima 
 #define tam_max 10
 
@@ -17,7 +15,7 @@ int main() {
         n = 7;
     }
 
-      int matriz[tam_max][tam_max];
+    int matriz[tam_max][tam_max];
 
     srand(time(NULL)); // Se inicializa el comando rand, el cual hace que la matriz se rellene de manera aleatoria
 
@@ -29,3 +27,9 @@ int main() {
         }
         printf("\n");
     }
+
+    /*
+Se crea el algoritmo que recorre la matriz.
+Se analiza cada posición de la matriz y se expande alrededor de dicha posición
+Se expande hasta que encuentra un cuadrado más grande o llega al límite
+*/
